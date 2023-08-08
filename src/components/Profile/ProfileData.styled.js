@@ -1,24 +1,37 @@
 import styled from 'styled-components';
  
+export const ProfileSection = styled.section`
+    display: block; 
+    width: 100%;
+    margin:  auto;    
+    max-width: 500px;    
+    height: 700px;
+`;
+
 export const ProfileDiv = styled.div`
-  width: 350px;
-  min-height: 460px;
+  width: 450px;
+  min-height: 650px;
   text-align: center;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 1px 1px 8px 0px tomato;
   padding-top: 30px;  
-  margin: 50px auto;
+  margin: 20px auto;
+`;
 
+export const CardDiv = styled.div`
+    margin: auto;
+    max-width: 350px;
+    background: #8bdfc3;
+    height: 550px;
+    border-radius: 8px;
 `;
 
 export const AvatarImg = styled.img`
   width: 250px;
   height: 250px;
-  margin-bottom: 30px;
-  border-radius: 50%;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 30px auto;
+  border-radius: 50%;  
 `;
 
 export const Name = styled.p`
@@ -39,6 +52,8 @@ export const Location = styled.p`
 `;
 
 export const StatsUl = styled.ul`
+  margin: auto;
+  width: 90%;
   position: relative;
   display: flex;
   align-items: center;

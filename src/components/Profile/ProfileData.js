@@ -1,18 +1,17 @@
-import { ProfileDiv, AvatarImg, Name, Tag, Location, StatsUl, StatsLi, StatsSpanLabel, StatsSpanQuantity} from './ProfileData.styled';
+import { ProfileDiv, AvatarImg, Name, Tag, Location, StatsUl, StatsLi, StatsSpanLabel, StatsSpanQuantity, ProfileSection, CardDiv} from './ProfileData.styled';
 
 export const ProfileData = ({items}) => {
     console.log(items)
-    return (        
-            <ProfileDiv>            
+    return ( 
+        <ProfileSection>
+          <ProfileDiv>            
                 {items.map(item => (
-                  <div>
-                    <div>
+                  <CardDiv>
+                    
                       <AvatarImg src={item.avatar} alt="foto" />
                       <Name>{item.username}</Name>
                       <Tag>{item.tag}</Tag>
                       <Location>{item.location}</Location>
-                    </div>
-                    
                         
                      <StatsUl>
                             <StatsLi>
@@ -28,16 +27,17 @@ export const ProfileData = ({items}) => {
                                 <StatsSpanQuantity>{item.stats.likes}</StatsSpanQuantity>
                             </StatsLi>
                      </StatsUl>
-                    </div>                     
+                    </CardDiv>                     
                 ))}          
-            </ProfileDiv>         
+            </ProfileDiv> 
+        </ProfileSection>
+                    
     );    
 };  
 
             
 // import UserInfo from './userInfo'
 // import { Card, Avatar, Name, Tag, Location, Stats } from './profile.style'
-
 
 // export default function Profile({ username, avatar, tag, location, stats: { followers, views, likes } }) {
 // 	return (
