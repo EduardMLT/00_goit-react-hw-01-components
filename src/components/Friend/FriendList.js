@@ -1,4 +1,4 @@
-import {FriendDiv, FriendUl, FriendLi, Status, AvatarImg, Name} from './FriendList.styled';
+import {FriendDiv, FriendUl, FriendLi, Status, AvatarImg, Name, Online} from './FriendList.styled';
 
 export const FriendList = ({ stats }) => {
     console.log(stats)
@@ -7,9 +7,12 @@ export const FriendList = ({ stats }) => {
             <FriendUl>
                 {stats.map(item => (
                     <FriendLi>
-                        <Status>{item.isOnline}AAA</Status>
+                        
+                        {item.isOnline ? <Online className="status online">{item.isOnline}</Online> : <Status className="status">{item.isOnline}</Status>}
+                       
                         <AvatarImg src={item.avatar} alt="User avatar" width="48" />
                         <Name>{item.name}</Name>
+                        
                     </FriendLi>
                 ))}   
             </FriendUl>  

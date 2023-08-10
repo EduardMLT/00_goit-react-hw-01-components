@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 export const FriendDiv = styled.div`
   width: 450px;
-  /* min-height: 650px; */
   text-align: center;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 1px 1px 8px 0px tomato;
-  padding-top: 30px;  
+  padding-top: 30px; 
+  padding-bottom: 30px; 
   margin: 20px auto;
 `;
 
@@ -16,10 +16,10 @@ export const FriendUl = styled.ul`
   width: 90%;
   position: relative;
   display: flex;
+  row-gap: 10px;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  /* height: 100px; */
+  justify-content: space-evenly; 
   border-radius: 8px;
   border-top: 2px solid #909090;
   background-color: #f3f3f3;
@@ -33,14 +33,21 @@ export const FriendLi = styled.li`
     border: 2px solid #909090;
     background-color: #f4edada8;
     align-items: center;
+    grid-column: 10px;
 `;
 
 export const Status = styled.span`
-  font-size: 18px;
-  font-weight: 600;
-  width: 50px;
-  height: 50px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
   background: tomato;
+`;
+
+export const Online = styled.span`
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: green;
 `;
 
 export const AvatarImg = styled.img`
@@ -51,7 +58,6 @@ export const AvatarImg = styled.img`
 `;
 
 export const Name = styled.p`
-  /* margin-bottom: 15px; */
   font-size: 20px;
   font-weight: 600;
   width: 80px;
