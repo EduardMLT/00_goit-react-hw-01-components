@@ -1,7 +1,7 @@
 
 import TableRowData from "./TransactionsTable";
 import {TransactionTable, TableHeader, TableRow} from './TransactionsData.styles'
-
+import {TableTd} from './TransactionsTable.styles'
 
 export const TransactionsData = ({ transact }) => {
     console.log(transact)
@@ -9,9 +9,9 @@ export const TransactionsData = ({ transact }) => {
         <TransactionTable className="transaction-history">
             <TableHeader className="transaction-header">
                 <tr>
-                    <th>Type</th>
-                    <th>Amount</th>
-                    <th>Currency</th>
+                    <TableTd>Type</TableTd>
+                    <TableTd>Amount</TableTd>
+                    <TableTd>Currency</TableTd>
                 </tr>
             </TableHeader>
 
