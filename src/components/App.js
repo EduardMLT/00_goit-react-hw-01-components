@@ -1,21 +1,19 @@
-import { ProfileData } from "./Profile/ProfileData";
-import profileItems from "../user.json";
-import { StatisticsData } from "./Statistics/StatisticsData";
-import data from "../data.json";
-import { FriendList } from "./Friend/FriendList";
-import friends from "../friends.json";
-import { TransactionsData } from "./Transactions/TransactionsData";
-import transactions from "../transactions.json";
+import { Profile } from './Profile/ProfileData';
+import dataProfile from '../data/user.json';
+import { Statistics } from './Statistics/StatisticsData';
+import data from '../data/data.json';
+import { FriendList } from './Friend/FriendList';
+import friends from '../data/friends.json';
+import { TransactionHistory } from './Transactions/TransactionsData';
+import transactions from '../data/transactions.json';
 
 export const App = () => {
   return (
     <div>
-      
-      <ProfileData items={profileItems} />
-      <StatisticsData stats={data} />
+      <Profile data={dataProfile} />
+      <Statistics stats={data} />
       <FriendList stats={friends} />
-      <TransactionsData transact={transactions} />
-        
+      <TransactionHistory transact={transactions} />
     </div>
   );
 };

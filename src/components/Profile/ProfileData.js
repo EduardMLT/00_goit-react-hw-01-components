@@ -1,41 +1,42 @@
 import { ProfileDiv, AvatarImg, Name, Tag, Location, ProfileSection, CardDiv, StatsUl, StatsLi, StatsSpanLabel, StatsSpanQuantity} from './ProfileData.styled';
 
 
-export const ProfileData = ({items}) => {
-    console.log(items)
-    return ( 
-        <ProfileSection>
-          <ProfileDiv>            
-                {items.map(item => (
-                  <CardDiv>
-                    
-                      <AvatarImg src={item.avatar} alt="foto" />
-                      <Name>{item.username}</Name>
-                      <Tag>{item.tag}</Tag>
-                      <Location>{item.location}</Location>
+export const Profile = ({
+  data: {
+    avatar,
+    username,
+    tag,
+    location,
+    stats: { followers, views, likes },
+  },
+}) => {  
+  return (
+    <ProfileSection>
+      <ProfileDiv>
+        <CardDiv>
+          <AvatarImg src={avatar} alt="foto" />
+          <Name>{username}</Name>
+          <Tag>{tag}</Tag>
+          <Location>{location}</Location>
 
-        <StatsUl>
-                            
-              <StatsLi>
-                <StatsSpanLabel>Followers</StatsSpanLabel>
-                <StatsSpanQuantity>{item.stats.followers}</StatsSpanQuantity>
-              </StatsLi>                            
-                            
-              <StatsLi>
-                <StatsSpanLabel>Views</StatsSpanLabel>
-                <StatsSpanQuantity>{item.stats.views}</StatsSpanQuantity>
-              </StatsLi>                               
-                            
-              <StatsLi>
-                <StatsSpanLabel>Likes</StatsSpanLabel>
-                <StatsSpanQuantity>{item.stats.likes}</StatsSpanQuantity>
-              </StatsLi>
-        </StatsUl>
-                     
-                  </CardDiv>                     
-                ))}          
-            </ProfileDiv> 
-        </ProfileSection>
-                    
-    );    
+          <StatsUl>
+            <StatsLi>
+              <StatsSpanLabel>Followers</StatsSpanLabel>
+              <StatsSpanQuantity>{followers}</StatsSpanQuantity>
+            </StatsLi>
+
+            <StatsLi>
+              <StatsSpanLabel>Views</StatsSpanLabel>
+              <StatsSpanQuantity>{views}</StatsSpanQuantity>
+            </StatsLi>
+
+            <StatsLi>
+              <StatsSpanLabel>Likes</StatsSpanLabel>
+              <StatsSpanQuantity>{likes}</StatsSpanQuantity>
+            </StatsLi>
+          </StatsUl>
+        </CardDiv>
+      </ProfileDiv>
+    </ProfileSection>
+  );
 };  
