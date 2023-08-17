@@ -21,3 +21,7 @@ export const TableRow = styled.tr`
   color: #808080;
   background-color: ${({ $iseven }) => ($iseven ? '#f4edada8' : '#fff')};
 `;
+
+export const TableTd = styled.td`
+  border-radius: 8px;
+`;

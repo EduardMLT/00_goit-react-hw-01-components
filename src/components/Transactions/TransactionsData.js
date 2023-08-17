@@ -1,7 +1,9 @@
-
-import TableRowData from "./TransactionsTable";
-import {TransactionTable, TableHeader, TableRow} from './TransactionsData.styles'
-import {TableTd} from './TransactionsTable.styles'
+import {
+  TransactionTable,
+  TableHeader,
+  TableRow,
+  TableTd
+} from './TransactionsData.styles';
 
 export const TransactionHistory = ({ transact }) => {
   
@@ -24,7 +26,9 @@ export const TransactionHistory = ({ transact }) => {
               className="transaction-row"
               $iseven={isEvenRow}
             >
-              <TableRowData items={transactionsItem} />
+              <TableTd>{transactionsItem.type}</TableTd>
+              <TableTd>{transactionsItem.amount}</TableTd>
+              <TableTd>{transactionsItem.currency}</TableTd>
             </TableRow>
           );
         })}
